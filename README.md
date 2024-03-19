@@ -107,10 +107,14 @@ This platform offers the following features which will make your task of making 
 ## Technologies Used:
 * **Next.js**: The frontend of the platform is built using Next.js,
   a React framework that provides server-side rendering and other performance optimizations.
-* **Tailwind CSS**: The UI components are styled using Tailwind CSS,
-  a utility-first CSS framework that allows for rapid UI development.
 * **React Flow**: The drag-and-drop interface is powered by React Flow,
   a library that provides a flexible and customizable flowchart component.
+* **Tailwind CSS**: The UI components are styled using Tailwind CSS,
+  a utility-first CSS framework that allows for rapid UI development.
+* **Shadcn/ui**: The form builder is built using shadcn/ui,
+  a form builder library that provides a simple and intuitive interface for defining form fields and their types.
+* **supabase**: The platform uses Supabase,
+  an open-source alternative to Firebase, for user authentication and real-time database functionality.
 
 ## Future Enhancements:
 * **User Authentication**: Implementing user authentication and user-specific workflows.

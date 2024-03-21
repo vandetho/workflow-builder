@@ -23,7 +23,7 @@ const UserButton = React.memo(() => {
     const signOut = async () => {
         await supabase.auth.signOut();
         toast.success('You have been signed out.');
-        router.replace('/');
+        router.refresh();
     };
 
     return (

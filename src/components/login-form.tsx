@@ -39,7 +39,7 @@ const LoginForm = React.memo(() => {
                 return;
             }
             toast.success('Logged in successfully');
-            router.replace('/dashboard');
+            router.refresh();
         },
         [router, supabase.auth],
     );

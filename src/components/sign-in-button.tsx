@@ -3,7 +3,7 @@ import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { cookies } from 'next/headers';
 import UserButton from '@/components/user-button';
 
-const LoginButton = React.memo(async () => {
+const SignInButton = React.memo(async () => {
     const supabase = createServerComponentClient({ cookies });
     const {
         data: { user },
@@ -23,4 +23,4 @@ const LoginButton = React.memo(async () => {
     );
 });
 
-export default LoginButton;
+export default SignInButton;

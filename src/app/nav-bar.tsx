@@ -4,7 +4,7 @@ import Blogs from '@/app/blogs';
 import Image from 'next/image';
 import Logo from '@/assets/logo-34.png';
 import GithubLink from '@/components/github-link';
-import LoginButton from '@/components/login-button';
+import SignInButton from '@/components/sign-in-button';
 
 interface NavBarProps {}
 
@@ -37,7 +37,7 @@ const NavBar = React.memo<NavBarProps>(() => {
                     <nav className="flex items-center gap-2">
                         <GithubLink />
                         <ThemeToggle />
-                        <LoginButton />
+                        <SignInButton />
                     </nav>
                 </div>
             </div>

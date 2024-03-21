@@ -17,7 +17,7 @@ const schema = object({
     password: string().required(),
 });
 
-const LoginForm = React.memo(() => {
+const SignUpForm = React.memo(() => {
     const supabase = createClientComponentClient();
     const form = useForm({
         resolver: yupResolver(schema),
@@ -79,4 +79,4 @@ const LoginForm = React.memo(() => {
     );
 });
 
-export default LoginForm;
+export default SignUpForm;

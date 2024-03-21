@@ -10,6 +10,7 @@ import { toast } from 'sonner';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { useRouter } from 'next/navigation';
 
 const schema = object({
     email: string().email().required(),
@@ -26,6 +27,7 @@ const LoginForm = React.memo(() => {
         },
     });
     const [isLoading, setIsLoading] = React.useState<boolean>(false);
+    const router = useRouter();
 
     const authenticateUser = React.useCallback(
         async (data: { email: string; password: string }) => {
@@ -37,8 +39,9 @@ const LoginForm = React.memo(() => {
                 return;
             }
             toast.success('Logged in successfully');
+            router.replace('/dashboard');
         },
-        [supabase.auth],
+        [router, supabase.auth],
     );
 
     return (

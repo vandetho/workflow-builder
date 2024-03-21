@@ -70,7 +70,7 @@ const SignInForm = React.memo(() => {
                     </div>
                     <CardFooter>
                         <Button type="submit" disabled={isLoading} className="w-full">
-                            Login
+                            Sign In
                         </Button>
                     </CardFooter>
                 </div>

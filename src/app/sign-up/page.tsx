@@ -34,7 +34,7 @@ const SignUpPage = async () => {
                     <SignUpForm />
                     <Separator />
                     <Button>
-                        <a href="/register">Sign In</a>
+                        <a href="/sign-in">Sign In</a>
                     </Button>
                 </CardContent>
             </Card>

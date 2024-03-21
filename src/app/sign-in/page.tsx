@@ -5,7 +5,6 @@ import { Separator } from '@/components/ui/separator';
 import SignInForm from '@/components/sign-in-form';
 import { createServerComponentClient } from '@supabase/auth-helpers-nextjs';
 import { redirect } from 'next/navigation';
-import { Button } from '@/components/ui/button';
 
 const SignInPage = async () => {
     const supabase = createServerComponentClient({ cookies });
@@ -26,16 +25,20 @@ const SignInPage = async () => {
         >
             <Card>
                 <CardHeader>
-                    <CardTitle>Sign into your account</CardTitle>
+                    <CardTitle>Sign Into your account</CardTitle>
                     <CardDescription>Easily manage your workflow configuration with your account</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <Separator className="my-4" />
                     <SignInForm />
                     <Separator />
-                    <Button>
-                        <a href="/register">Register</a>
-                    </Button>
+
+                    <a
+                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        href="/sign-up"
+                    >
+                        Sign Up
+                    </a>
                 </CardContent>
             </Card>
         </div>
